@@ -69,7 +69,7 @@ Firstly the tables in the database have to be created. this is done with a seper
 ### Run data pipelines
 
 see below for airflow dag
-![setup](images/setup_dag.png)
+![setup](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/data_model.PNG)
 dag used for creating connections and tables in redsift
 ![etl](images/etl_dag.png)
 dag used for staging, loading and quality checks
