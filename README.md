@@ -57,7 +57,8 @@ drop all were iata code is nan and where country is not US. than drop gps code l
 The model consists of 6 tables. main fact table is the I94 table with the immigration data. linked to the i94 table on arrival port to iata code is the airport table, with dataset from the airport. Linked to the airport data is the demographics table linked on city name in the two tables. A time table is linked to the i94 table with date column. A climate table per month per city is linked to the demographics table and the time table. a simple table with country codes in the i94 data mapped to country names is included to make more sense of some queries. see the picture of the schema for more details
 
 ### Data model
-![data-model](\images\data_model.png)
+<img src="images/data_model.png" width="50"/>
+
 
 ### Mapping out data pipelines
 all steps are executed in airflow. the database will be constructed and filled in redshift. the raw data will be saved in s3
@@ -68,10 +69,11 @@ Firstly the tables in the database have to be created. this is done with a seper
 ### Run data pipelines
 
 see below for airflow dag
-![setup](\images\setup_dag.png)
+![setup](images/setup_dag.png)
 dag used for creating connections and tables in redsift
-![etl](\images\etl_dag.png)
+![etl](images/etl_dag.png)
 dag used for staging, loading and quality checks
+
 ### Run quality checks
 Two quality checks are conducted for every fact and dimension table.To check if the tables contain data, all data in the table is selected and checked whether there are more than 0 rows in the data. To check if their are no null values in the primary keys, the primary key column is selected where primary key is null. the quality checker checks whether this selection contains zero rows as expected.
 
