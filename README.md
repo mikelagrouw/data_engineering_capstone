@@ -57,7 +57,7 @@ drop all were iata code is nan and where country is not US. than drop gps code l
 The model consists of 6 tables. main fact table is the I94 table with the immigration data. linked to the i94 table on arrival port to iata code is the airport table, with dataset from the airport. Linked to the airport data is the demographics table linked on city name in the two tables. A time table is linked to the i94 table with date column. A climate table per month per city is linked to the demographics table and the time table. a simple table with country codes in the i94 data mapped to country names is included to make more sense of some queries. see the picture of the schema for more details
 
 ### Data model
-<img src="images/data_model.png" width="50"/>
+![setup](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/data_model.PNG)
 
 
 ### Mapping out data pipelines
@@ -69,9 +69,9 @@ Firstly the tables in the database have to be created. this is done with a seper
 ### Run data pipelines
 
 see below for airflow dag
-![setup](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/data_model.PNG)
+![setup](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/setup_dag.PNG)
 dag used for creating connections and tables in redsift
-![etl](images/etl_dag.png)
+![etl](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/etl_dag.PNG)
 dag used for staging, loading and quality checks
 
 ### Run quality checks
