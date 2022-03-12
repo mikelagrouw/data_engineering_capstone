@@ -48,6 +48,8 @@ remove columns with more than 50 % null values. than extract sensible date/time 
 group by month and city. average all other columns. this because the dates of immigration and temperature do not overlap. we transform the temperature table to a local climate table
 ### airport data
 drop all were iata code is nan and where country is not US. than drop gps code local code, country, continent and region.
+### Country mapping data
+Since the i94 table only consisted of country codes that were not very informative for the user, a country mapping table was constructed. to have data mapping country code to country name a csv was constructed manually from the i94 label description file. it is included in the data_country_mapping folder and databucket capstonemike
 
 
 ## Step 3: Define the Data Model
