@@ -156,6 +156,14 @@ if the database should be accesible by 100+ people, these people should all get 
 
 ### Example queries
 
-#### query one
+#### Query one
 to answer the question; on average, immigrants from which countries tend to go to the warmest places in the US, the following query was run in the redshift query editor
 ![etl](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/query1.PNG)
+with the following results
+![etl](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/results1.PNG)
+
+#### Query two
+to answer the question; to which cities travel people with bussiness visa most often and what is these cities population, the following query was run
+![etl](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/query2.PNG)
+with the following results
+![etl](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/results2.PNG)
