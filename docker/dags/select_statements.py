@@ -72,7 +72,7 @@ class SelectStatements():
     """
 
     select_temperature_data = """
-    select
+    select distinct
     month,
     staging_temp.city,
     averagetemperature,

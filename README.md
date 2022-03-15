@@ -149,7 +149,13 @@ country_id| float| Primary key: id
 country_name| varchar| country name
 
 ### Finishing remarks
-I propose the data should be updated daily, as this is the finest timescale of the i94 data.
+I propose the datapipeline should be run monthly, as the i94 data which we use to construct the fact table is updated monthly.
 If the data was increased by a 100-fold, more nodes should be aquired in redshift to run the etl. the data preprocessing should be conducted with spark and emdr instead of pandas locally.
 If the data should be run on daily basis on 7 am this should be scheduled in airflow.
 if the database should be accesible by 100+ people, these people should all get their own iam user with specific rights to read the redshift database.
+
+### Example queries
+
+#### query one
+to answer the question; on average, immigrants from which countries tend to go to the warmest places in the US, the following query was run in the redshift query editor
+![etl](https://github.com/mikelagrouw/data_engineering_capstone/blob/main/images/query1.PNG)
