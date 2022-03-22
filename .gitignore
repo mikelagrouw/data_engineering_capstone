@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+.env
+docker/logs
+docker/plugins/operators/__pycache__
+**/__pycache__/**
